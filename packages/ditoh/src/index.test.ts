@@ -1,3 +1,4 @@
+/** biome-ignore-all lint/suspicious/noExplicitAny: For mocking */
 import { execSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
@@ -143,8 +144,6 @@ describe("ditoh", () => {
 	});
 
 	it("should handle malformed config gracefully", async () => {
-		const cwd = process.cwd();
-
 		const consoleErrorSpy = vi
 			.spyOn(console, "error")
 			.mockImplementation(() => {});
