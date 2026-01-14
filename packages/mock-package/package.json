@@ -1,0 +1,13 @@
+{
+	"name": "mock-package",
+	"private": true,
+	"version": "1.0.0",
+	"description": "Mock package for testing ditoh",
+	"main": "index.js",
+	"scripts": {
+		"echo": "ditoh echo"
+	},
+	"dependencies": {
+		"ditoh": "workspace:*"
+	}
+}

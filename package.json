@@ -1,0 +1,38 @@
+{
+	"name": "ditoh-monorepo",
+	"private": true,
+	"description": "Monorepo for Ditoh",
+	"author": "Kevin Reynolds",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/katerman/ditoh.git"
+	},
+	"scripts": {
+		"lint": "pnpm exec biome check --write",
+		"test": "pnpm --filter ditoh run test",
+		"coverage": "pnpm --filter ditoh run coverage",
+		"build": "pnpm --filter ditoh run build",
+		"build:watch": "pnpm --filter ditoh run build:watch",
+		"type-check": "pnpm --filter ditoh run type-check",
+		"prepare": "husky"
+	},
+	"lint-staged": {
+		"*.{ts,md,json}": [
+			"pnpm exec biome check --write"
+		],
+		"*.{ts}": [
+			"pnpm test",
+			"pnpm type-check"
+		]
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.3.11",
+		"@changesets/cli": "^2.29.8",
+		"@commitlint/cli": "^20.3.1",
+		"@commitlint/config-conventional": "^20.3.1",
+		"@types/node": "^22",
+		"husky": "^9.1.7",
+		"lint-staged": "^16.2.7"
+	}
+}

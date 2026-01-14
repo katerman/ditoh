@@ -1,0 +1,5 @@
+---
+"ditoh": major
+---
+
+First release

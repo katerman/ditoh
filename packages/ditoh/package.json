@@ -1,0 +1,57 @@
+{
+	"name": "ditoh",
+	"version": "0.0.0",
+	"description": "A tool for monorepos to run meta scripts in subpackages.",
+	"keywords": [
+		"monorepo",
+		"turborepo",
+		"script",
+		"scripts",
+		"tooling",
+		"task-runner",
+		"workspace",
+		"cli",
+		"automation"
+	],
+	"files": [
+		"dist"
+	],
+	"exports": {
+		".": "./dist/index.esm.js"
+	},
+	"bin": {
+		"ditoh": "dist/index.esm.js"
+	},
+	"license": "MIT",
+	"author": "Kevin Reynolds",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/katerman/ditoh.git",
+		"directory": "packages/ditoh"
+	},
+	"homepage": "https://github.com/katerman/ditoh#readme",
+	"bugs": {
+		"url": "https://github.com/katerman/ditoh/issues"
+	},
+	"publishConfig": {
+		"access": "public",
+		"registry": "https://registry.npmjs.org/"
+	},
+	"sideEffects": false,
+	"type": "module",
+	"main": "dist/index.esm.js",
+	"scripts": {
+		"build": "tsdown",
+		"build:watch": "tsdown --watch",
+		"test": "vitest",
+		"coverage": "vitest run --coverage",
+		"type:check": "tsc --noEmit"
+	},
+	"packageManager": "pnpm@10.28.0+sha512.05df71d1421f21399e053fde567cea34d446fa02c76571441bfc1c7956e98e363088982d940465fd34480d4d90a0668bc12362f8aa88000a64e83d0b0e47be48",
+	"devDependencies": {
+		"tsdown": "^0.19.0",
+		"typescript": "^5.9.3",
+		"vitest": "^4.0.17",
+		"@vitest/coverage-v8": "^4.0.17"
+	}
+}

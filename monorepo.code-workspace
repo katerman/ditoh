@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{ "path": ".", "name": "." },
+		{
+			"path": "packages/ditoh",
+			"name": "ditoh"
+		},
+		{
+			"path": "packages/mock-package",
+			"name": "mock-package"
+		}
+	]
+}
