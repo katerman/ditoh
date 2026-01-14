@@ -15,6 +15,7 @@
 		"build": "pnpm --filter ditoh run build",
 		"build:watch": "pnpm --filter ditoh run build:watch",
 		"type-check": "pnpm --filter ditoh run type-check",
+		"publish-packages": "cp README.md LICENSE.md packages/ditoh/ && changeset publish && rm packages/ditoh/README.md packages/ditoh/LICENSE.md",
 		"prepare": "husky"
 	},
 	"lint-staged": {
