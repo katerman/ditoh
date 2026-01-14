@@ -1,6 +1,6 @@
 {
 	"name": "ditoh",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A tool for monorepos to run meta scripts in subpackages.",
 	"keywords": [
 		"monorepo",
