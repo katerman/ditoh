@@ -1,5 +1,11 @@
 # ditoh
 
+## 1.0.2
+
+### Patch Changes
+
+- 48540b2: Correctly build before publishing
+
 ## 1.0.1
 
 ### Patch Changes
