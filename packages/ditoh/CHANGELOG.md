@@ -1,5 +1,11 @@
 # ditoh
 
+## 1.1.0
+
+### Minor Changes
+
+- 0aab7f1: Support extra args being passed into ditoh scripts
+
 ## 1.0.2
 
 ### Patch Changes
