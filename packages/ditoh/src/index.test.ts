@@ -51,13 +51,10 @@ describe("ditoh", () => {
 		const ditoh = await loadDitoh();
 		ditoh();
 
-		expect(execSync).toHaveBeenCalledWith(
-			"echo 'success'",
-			expect.objectContaining({
-				stdio: "inherit",
-				cwd: cwd,
-			}),
-		);
+		expect(execSync).toHaveBeenCalledWith("echo 'success'", {
+			stdio: "inherit",
+			cwd: cwd,
+		});
 	});
 
 	it("should find config in parent directory and run script", async () => {
@@ -77,13 +74,13 @@ describe("ditoh", () => {
 			return "";
 		});
 
-		process.argv = ["node", "ditoh", "parent"];
+		process.argv = ["node", "ditoh", "parent", "--", "-debug"];
 
 		const ditoh = await loadDitoh();
 		ditoh();
 
 		expect(execSync).toHaveBeenCalledWith(
-			"echo 'parent success'",
+			"echo 'parent success' -- -debug",
 			expect.objectContaining({
 				stdio: "inherit",
 				cwd: cwd,

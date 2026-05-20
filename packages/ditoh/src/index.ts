@@ -54,11 +54,17 @@ export default function ditoh() {
 
 	if (script) {
 		const command = config?.scripts[script];
+		const extraArgs = process.argv.slice(3).join(" ");
 
-		console.log(`[Ditoh] Running command: '${command}'`);
+		if (shouldLog) {
+			console.log(`[Ditoh] Running command: '${command}'`);
+		}
 
 		if (command) {
-			execSync(command, { stdio: "inherit", cwd: subPackagePath });
+			execSync(`${command}${extraArgs ? ` ${extraArgs}` : ""}`, {
+				stdio: "inherit",
+				cwd: subPackagePath,
+			});
 		} else {
 			console.warn(`[Ditoh] ${script} not found in ditoh.config.json`);
 			process.exit(1);
